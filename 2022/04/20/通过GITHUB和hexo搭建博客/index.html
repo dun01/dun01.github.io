@@ -17,14 +17,14 @@
 <meta property="og:site_name" content="dun01&#39;Blog">
 <meta property="og:description" content="本篇博客的主要内容是关于如何通过github提供的自定义仓库和博客生成工具来搭建一个属于自己的博客，所有步骤都是从网络上copy来的，在此做一个总结。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://dun01.github.io/2022/04/20/%E9%80%9A%E8%BF%87GITHUB%E5%92%8Chexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/blog/source_posts/通过GITHUB和hexo搭建博客/lz.jpg">
+<meta property="og:image" content="https://dun01.github.io/2022/04/20/%E9%80%9A%E8%BF%87GITHUB%E5%92%8Chexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/lz.jpg">
 <meta property="article:published_time" content="2022-04-20T02:49:16.000Z">
-<meta property="article:modified_time" content="2022-04-24T07:14:41.808Z">
+<meta property="article:modified_time" content="2022-04-24T07:22:04.431Z">
 <meta property="article:author" content="dun01&#39;Blog">
 <meta property="article:tag" content="GitHub">
 <meta property="article:tag" content="Hexo">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://dun01.github.io/2022/04/20/%E9%80%9A%E8%BF%87GITHUB%E5%92%8Chexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/blog/source_posts/通过GITHUB和hexo搭建博客/lz.jpg">
+<meta name="twitter:image" content="https://dun01.github.io/2022/04/20/%E9%80%9A%E8%BF%87GITHUB%E5%92%8Chexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/lz.jpg">
   
     <link rel="alternative" href="/atom.xml" title="dun01&#39;Blog" type="application/atom+xml">
   
@@ -286,7 +286,7 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">1.配置hexo</span><br><span class="line">打开博客根路径下的配置文件_config.yml</span><br><span class="line">修改以下属性</span><br><span class="line">post_asset_folder: true            # 此处默认是false，改成true后新建博客是会在</span><br><span class="line">                                   # source\_posts目录下创建于博客同名的文件夹</span><br><span class="line">2.安装相应模块</span><br><span class="line">npm install https://github.com/CodeFalling/hexo-asset-image</span><br><span class="line">3.编写博客</span><br><span class="line">hexo new testimg</span><br><span class="line">到source\_posts目录下，发现一个testimg的文件夹和一个testimg.md文件，</span><br><span class="line">将图片放进testimg文件夹下</span><br><span class="line">打开testimg.md文件，输入以下内容</span><br><span class="line">![测试图片](./testimg/example.png)</span><br><span class="line">保存，生成页面</span><br><span class="line">hexo g</span><br><span class="line">部署</span><br><span class="line">hexo d</span><br><span class="line">查看页面</span><br><span class="line"></span><br><span class="line">在本文撰写期间此方法还是有效的，以后会不会失效暂不知。2022.4.24日</span><br></pre></td></tr></table></figure>
 
 <p>放个图片祝贺一下成功</p>
-<p><img src="/2022/04/20/%E9%80%9A%E8%BF%87GITHUB%E5%92%8Chexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/blog\source_posts\通过GITHUB和hexo搭建博客\lz.jpg"></p>
+<p><img src="/2022/04/20/%E9%80%9A%E8%BF%87GITHUB%E5%92%8Chexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/lz.jpg"></p>
 
     
 
