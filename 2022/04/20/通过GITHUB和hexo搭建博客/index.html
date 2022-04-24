@@ -17,12 +17,14 @@
 <meta property="og:site_name" content="dun01&#39;Blog">
 <meta property="og:description" content="本篇博客的主要内容是关于如何通过github提供的自定义仓库和博客生成工具来搭建一个属于自己的博客，所有步骤都是从网络上copy来的，在此做一个总结。">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://dun01.github.io/2022/04/20/%E9%80%9A%E8%BF%87GITHUB%E5%92%8Chexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/blog/source_posts/通过GITHUB和hexo搭建博客/lz.jpg">
 <meta property="article:published_time" content="2022-04-20T02:49:16.000Z">
-<meta property="article:modified_time" content="2022-04-21T06:33:44.045Z">
+<meta property="article:modified_time" content="2022-04-24T07:14:41.808Z">
 <meta property="article:author" content="dun01&#39;Blog">
 <meta property="article:tag" content="GitHub">
 <meta property="article:tag" content="Hexo">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://dun01.github.io/2022/04/20/%E9%80%9A%E8%BF%87GITHUB%E5%92%8Chexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/blog/source_posts/通过GITHUB和hexo搭建博客/lz.jpg">
   
     <link rel="alternative" href="/atom.xml" title="dun01&#39;Blog" type="application/atom+xml">
   
@@ -235,7 +237,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">1.5k字</span>
+      <span class="post-count">1.8k字</span>
     </span>
   </span>
 
@@ -244,7 +246,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">6分</span>
+      <span class="post-count">7分</span>
     </span>
   </span>
 </div>
@@ -259,7 +261,7 @@
 <span id="more"></span>
 
 <p>需要用到的工具有以下几个</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1.一个github免费账户</span><br><span class="line">2.</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1.一个github免费账户</span><br><span class="line">2.一个markdown编辑器</span><br></pre></td></tr></table></figure>
 
 <h3 id="工具软件"><a href="#工具软件" class="headerlink" title="工具软件"></a>工具软件</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1.nodejs 用于运行hexo脚本生成博客</span><br><span class="line">2.npm(nodejs已经自带，无需再次安装) 用于安装各种脚本模块</span><br><span class="line">3.git 用于上传生成好的博客至github</span><br><span class="line">4.hexo 博客框架</span><br></pre></td></tr></table></figure>
 
@@ -276,9 +278,15 @@
 
 <h4 id="5-生成第一个博客"><a href="#5-生成第一个博客" class="headerlink" title="5.生成第一个博客"></a>5.生成第一个博客</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">在git bash中输入以下命令</span></span><br><span class="line">hexo new post testblog   # testblog为文章名</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">执行此命令后会在Hexo/blog/source/_posts路径下生成一个叫testblog.md的文件</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">以markdown编辑器打开此文件</span></span><br><span class="line"></span><br><span class="line">---</span><br><span class="line">title: testblog                    # 此为博客的名称</span><br><span class="line">date: 2022-04-20 10:49:16          # 此处为博客的生成时间</span><br><span class="line">tags:                              # 此处为此博客的标签</span><br><span class="line">  - GitHub</span><br><span class="line">  - Hexo</span><br><span class="line">---</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">在此处输入博客的正文，上面的信息一片博客的元数据</span></span><br><span class="line">  testblog</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">保存此文件，回到Hexo/blog目录下，执行以下命令</span></span><br><span class="line">hexo g                # 根据md文件生成博客页面</span><br><span class="line">hexo d                # 将生成的博客页面上传到github</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">过20多分钟，可能时间更长，访问https://github用户名.github.io 进行测试</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="6-部署过程中的问题"><a href="#6-部署过程中的问题" class="headerlink" title="6.部署过程中的问题"></a>6.部署过程中的问题</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">常用命令</span></span><br><span class="line">hexo clean            # 清除生成的静态文件缓存</span><br><span class="line">hexo g                # 生成页面的静态文件</span><br><span class="line">hexo d                # 将生成的静态文件上传到github</span><br><span class="line">hexo s                # 在本地启动一个web服务器，用来预览生成好的博客页面，访问地址</span><br><span class="line">                      # 为localhost:4000</span><br><span class="line">hexo new post blogname        # 新建一个博客</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">npm install 模块名 --save           # 安装某个模块</span><br><span class="line">npm uninstall 模块名 --save         # 卸载某个模块</span><br><span class="line"></span><br><span class="line">----------------------------------------</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">在生成博客的静态文件时或清楚静态文件时，提示某个文件正在打开，但是已手动关闭，仍提示</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">文件被占用，可以重启电脑试试</span></span><br><span class="line"></span><br><span class="line">-----------</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">主题中的文件Hexo\blog\themes\yilia-plus</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">yilia-plus 是我用到的主题</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">在此目录下的_config.yml文件</span></span><br></pre></td></tr></table></figure>
+<h4 id="6-部署过程中的问题"><a href="#6-部署过程中的问题" class="headerlink" title="6.部署过程中的问题"></a>6.部署过程中的问题</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">常用命令</span></span><br><span class="line">hexo clean            # 清除生成的静态文件缓存</span><br><span class="line">hexo g                # 生成页面的静态文件</span><br><span class="line">hexo d                # 将生成的静态文件上传到github</span><br><span class="line">hexo s                # 在本地启动一个web服务器，用来预览生成好的博客页面，访问地址</span><br><span class="line">                      # 为localhost:4000</span><br><span class="line">hexo new post blogname        # 新建一个博客</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">npm install 模块名 --save           # 安装某个模块</span><br><span class="line">npm uninstall 模块名 --save         # 卸载某个模块</span><br><span class="line"></span><br><span class="line">----------------------------------------</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">在生成博客的静态文件时或清楚静态文件时，提示某个文件正在打开，但是已手动关闭，仍提示</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">文件被占用，可以重启电脑试试</span></span><br><span class="line"></span><br><span class="line">-----------</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">主题中的文件Hexo\blog\themes\yilia-plus</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">yilia-plus 是我用到的主题</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">在此目录下的_config.yml文件，配置了博客主页中各个模块的开关，例如动态效果，看板娘</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">等的开关，可根据自己的喜好更改</span></span><br><span class="line"></span><br><span class="line">----------------</span><br></pre></td></tr></table></figure>
 
 <h4 id="7-日常的操作"><a href="#7-日常的操作" class="headerlink" title="7.日常的操作"></a>7.日常的操作</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">日产的操作就是博客管理</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">上传新博客的基本流程</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">在Hexo/blog 路径下右键打开git bash客户端</span></span><br><span class="line">hexo new post 新博客的名称</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">到 Hexo\blog\<span class="built_in">source</span>\_posts路径下编辑md文件，将博客的主要内容录入</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">生成静态页面</span></span><br><span class="line">hexo g</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">上传静态页面</span></span><br><span class="line">hexo d</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">删除博客，在某篇博客不满意时可以删除</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">删除Hexo\blog\<span class="built_in">source</span>\_posts路径下对应的博客md文件</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">清楚缓存</span> </span><br><span class="line">hexo clean </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">重新生成静态文件</span></span><br><span class="line">hexo g</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">上传</span></span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<h4 id="8-图片上传问题"><a href="#8-图片上传问题" class="headerlink" title="8.图片上传问题"></a>8.图片上传问题</h4><p>有个问题一直困扰，上传的图片在博客内显示不正常，查看图片的连接地址，发现与github中的路径不同。在网上找了好几个解决方案，都不能用，最后无意间逛B站找到了一个解决方案，才解决</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">1.配置hexo</span><br><span class="line">打开博客根路径下的配置文件_config.yml</span><br><span class="line">修改以下属性</span><br><span class="line">post_asset_folder: true            # 此处默认是false，改成true后新建博客是会在</span><br><span class="line">                                   # source\_posts目录下创建于博客同名的文件夹</span><br><span class="line">2.安装相应模块</span><br><span class="line">npm install https://github.com/CodeFalling/hexo-asset-image</span><br><span class="line">3.编写博客</span><br><span class="line">hexo new testimg</span><br><span class="line">到source\_posts目录下，发现一个testimg的文件夹和一个testimg.md文件，</span><br><span class="line">将图片放进testimg文件夹下</span><br><span class="line">打开testimg.md文件，输入以下内容</span><br><span class="line">![测试图片](./testimg/example.png)</span><br><span class="line">保存，生成页面</span><br><span class="line">hexo g</span><br><span class="line">部署</span><br><span class="line">hexo d</span><br><span class="line">查看页面</span><br><span class="line"></span><br><span class="line">在本文撰写期间此方法还是有效的，以后会不会失效暂不知。2022.4.24日</span><br></pre></td></tr></table></figure>
+
+<p>放个图片祝贺一下成功</p>
+<p><img src="/2022/04/20/%E9%80%9A%E8%BF%87GITHUB%E5%92%8Chexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/blog\source_posts\通过GITHUB和hexo搭建博客\lz.jpg"></p>
 
     
 
@@ -387,20 +395,6 @@
   </div>
 </article>
 
-
-<nav id="article-nav">
-  
-    <a href="/2022/04/22/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Hello World
-        
-      </div>
-    </a>
-  
-  
-</nav>
 
 
 <aside class="wrap-side-operation">
